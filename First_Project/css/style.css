@@ -1,0 +1,377 @@
+/* =======================================================
+Assignment 1
+Browser Support: https://jigsaw.w3.org/css-validator/validator
+Tested browsers: Chrome, Firefox, Safari, Opera
+==========================================================*/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;1,300;1,400&display=swap");
+
+/* =================================== */
+/* Part A - Styled Content with a List */
+/* =================================== */
+/*List bullet image ribbon.pmg */
+ul {
+  list-style-image: url("../img/ribbon.png");
+}
+
+/* Border around the "CBCF History" */
+h1 + div {
+  border: #f775bb;
+  border-style: solid;
+  border-radius: 10px;
+  width: 525px;
+  height: 250px;
+  margin: 5px;
+  padding: 15px;
+}
+
+/* visited hyperlink */
+h1 + div p > a:visited {
+  color: deeppink;
+}
+
+/* First Letter of first paragraph */
+h3 + p::first-letter {
+  font-size: 2em;
+}
+
+/* =================================== */
+/* Part B - A Better Timetable */
+/* =================================== */
+
+/* Center the course information inside a cell */
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+td div {
+  background-color: #8dd1ca;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #240b36;
+}
+td div p {
+  margin-top: 1em;
+}
+td {
+  height: 7em;
+}
+
+/* =================================== */
+/* Part C - A Flexbox Navigation */
+/* =================================== */
+
+/* Navigation bar */
+nav {
+  min-width: 40em;
+  margin: 0.2em;
+  height: 3em;
+  background-color: rebeccapurple;
+  font-family: "Roboto", serif;
+  border-radius: 0.4em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+/* Hyper links in the navigation bar */
+nav a {
+  margin-left: 1em;
+  text-decoration: none;
+}
+nav a:visited {
+  color: #ccff66;
+}
+nav a:active {
+  color: #ff6666;
+}
+nav a:hover {
+  color: white;
+}
+div > i {
+  color: white;
+  margin: 0.1em;
+  font-size: 2em;
+}
+
+/* Search and go button in the navigation bar (form) */
+div form {
+  margin: 0.6em;
+}
+/* Font awesome icon in search bar */
+form i {
+  color: white;
+  font-size: 1.5em;
+  position: absolute;
+  margin-top: 0.12em;
+  margin-left: 0.3em;
+}
+/* search text box */
+nav form input {
+  padding-left: 3em;
+  background-color: #2ec4b6;
+  width: 14em;
+  height: 2em;
+  border-radius: 0.5em;
+  border: none;
+  color: white;
+}
+/* go button */
+nav form button {
+  color: rebeccapurple;
+  width: 3em;
+  border-radius: 0.7em;
+  font-size: 1.2em;
+  border: none;
+  margin-left: 0.3em;
+  margin-right: 0.3em;
+}
+
+/* =================================== */
+/* Part D */
+/* =================================== */
+
+/* Entire form */
+h1 + form {
+  width: 35em;
+  height: 25em;
+  display: flex;
+  margin: 3em auto;
+  flex-direction: column;
+  border: none;
+  border-radius: 0.3em;
+  box-shadow: 0px 9px 9px 0px rgba(0, 0, 0, 0.65);
+  font-family: Roboto;
+  border-right: 2.5em solid #4285f4;
+}
+/* Heading (ACCOUNT LOGIN) */
+form div h3 {
+  color: #4285f4;
+}
+
+/* All div in the form */
+h1 + form div {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5em auto;
+  width: 30em;
+  color: grey;
+  font-size: 0.8em;
+  letter-spacing: 2.2px;
+}
+
+/* Input text area (USERNAME & PASSWORD) */
+form div input {
+  height: 3em;
+  background-color: rgba(210, 215, 211, 0.5);
+  border: none;
+  border-radius: 0.4em;
+  text-decoration-color: black;
+}
+/* Input label (USERNAME & PASSWORD)  */
+form div label {
+  margin: 0.4em;
+}
+
+/* Remember me and Forgot Password */
+form div div {
+  width: 38em;
+  height: 2em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1em;
+}
+form div div a {
+  margin-left: 14em;
+  display: flex;
+}
+
+/* Login button */
+form div button {
+  border-radius: 0.4em;
+  border: none;
+  height: 3em;
+  background-color: #4285f4;
+  color: white;
+}
+
+/* =================================== */
+/* Part E - Promote Yourself */
+/* =================================== */
+
+/* First div area (photo, myself, contacts and findmore) */
+section > div > div:nth-of-type(1) {
+  background: linear-gradient(to right, #9796f0, #fbc7d4);
+  height: 30em;
+  width: 20em;
+  position: absolute;
+  margin: 3em;
+  top: 40px;
+  right: 0px;
+}
+/* My photo */
+section div img {
+  width: 15em;
+  height: 15em;
+  border-radius: 60%;
+  position: absolute;
+  top: 0px;
+  right: 5.5em;
+}
+/* My photo animation */
+section div img:hover {
+  transform: scale(1.07);
+}
+/* Heading */
+div div h2 {
+  margin-top: 7em;
+  margin-left: 3em;
+  color: #219e92;
+  font-family: "Merriweather", serif;
+}
+/* Paragraph */
+div div h2 + p {
+  margin-top: 1em;
+  margin-left: 0.7em;
+  margin-right: 0.7em;
+  display: flex;
+  justify-content: center;
+}
+/* Contact us (fb, insta, twitter, pintrest, g+) */
+section > div > div div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Contact icons */
+section > div > div i {
+  color: burlywood;
+  margin: 0.25em;
+  margin-top: 0em;
+  font-size: 2em;
+}
+/* Contact icons animation */
+section > div > div i:hover {
+  transform: scale(1.5);
+}
+/* Find more button */
+section > div > div button {
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: white;
+  padding: 1em;
+  border: 0.2em solid grey;
+  display: inline-block;
+  transition: all 0.4s ease 0s;
+  margin-left: 6em;
+  margin-top: 0em;
+  font-size: 1em;
+}
+/* Find more buttin animation */
+section > div > div button:hover {
+  color: white;
+  background: burlywood;
+  border-color: goldenrod;
+  transition: all 0.4s ease 0s;
+}
+
+/* Second div (Technical Skills) */
+/* Second div */
+section > div > div:nth-of-type(2) {
+  background: linear-gradient(to right, #9796f0, #fbc7d4);
+  height: 25em;
+  width: 20em;
+  position: absolute;
+  margin-right: 3em;
+  margin-top: 2em;
+  margin-bottom: 0em;
+  top: 550px;
+  right: 0px;
+}
+/* heading */
+section > div > div:nth-of-type(2) > h2 {
+  margin: 0.2em 3em;
+}
+/* Each div inside the second div */
+section > div > div:nth-of-type(2) > div {
+  height: 5em;
+  width: 19em;
+  margin: 0em auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* Each div animation */
+section > div > div:nth-of-type(2) > div:hover {
+  transform: scale(1.03);
+  background-color: rgb(212, 174, 77);
+  color: #e9e4f0;
+  font-size: 1em;
+}
+section > div > div:nth-of-type(2) > div > p {
+  margin-top: 0px;
+  font-size: 0.8em;
+}
+section > div > div:nth-of-type(2) > div > h4 {
+  margin-bottom: 0px;
+}
+
+/* Third div (Interests) */
+section > div > div:nth-of-type(3) {
+  background: linear-gradient(to right, #9796f0, #fbc7d4);
+  height: 25em;
+  width: 20em;
+  position: absolute;
+  margin-top: 0em;
+  margin-right: 3em;
+  top: 1000px;
+  right: 0px;
+}
+/* Heading */
+section > div > div:nth-of-type(3) h2 {
+  margin-left: 5em;
+  margin-top: 0.5em;
+}
+/* Icons */
+section > div > div:nth-of-type(3) i {
+  font-size: 3em;
+}
+/* 4 div boxes*/
+section > div > div:nth-of-type(3) div:nth-of-type(1) {
+  background: linear-gradient(to right, #240b36, #c31432);
+  width: 7.5em;
+  height: 7.5em;
+  margin: 1em;
+  float: right;
+}
+section > div > div:nth-of-type(3) div:nth-of-type(2) {
+  background: linear-gradient(to right, #240b36, #c31432);
+  width: 7.5em;
+  height: 7.5em;
+  margin: 1em;
+  float: right;
+}
+section > div > div:nth-of-type(3) div:nth-of-type(3) {
+  background: linear-gradient(to right, #240b36, #c31432);
+  width: 7.5em;
+  height: 7.5em;
+  margin: 1em;
+  float: right;
+}
+section > div > div:nth-of-type(3) div:nth-of-type(4) {
+  background: linear-gradient(to right, #240b36, #c31432);
+  width: 7.5em;
+  height: 7.5em;
+  margin: 1em;
+  float: right;
+}
